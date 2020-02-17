@@ -1,0 +1,19 @@
+
+
+.create
+ .create--title
+  新しくtipsを作成する
+ .cteate--tips
+  =form_with model: @memo, url:memos_path , local: true  do |f|
+   .create--tips--title
+    =f.text_field :title,class:'text-form',placeholder:'タイトルを入力'
+   .create--tips--body
+    =f.text_area :body,class:'text-body',placeholder:'本文を入力'
+   .create--tips--url
+    =f.text_field :link,class:'text-url',placeholder:'参考にしたURLを記入'
+   .create--tips--send
+    =f.submit "新しく作る！"
+  -# =form_with(model: @tip, local: true) do |form|
+  -#  =form.text_field :image, placeholder: "Image Url"
+  -#  =form.text_area :text, placeholder: "text" , rows: "10"
+  -#  =form.submit "SEND"

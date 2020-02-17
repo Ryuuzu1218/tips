@@ -1,0 +1,36 @@
+.wrapper
+ .menu
+  My tips
+  .menu__create
+   .menu__create--click
+    =link_to "新しく作る",new_memo_path
+  .menu__search
+   ここに検索フォーム
+
+ .list
+  .list--title
+   My tips一覧
+  .list--box
+   .list__a-tips
+    - @memo.each do |memo|
+     .list__a-tips__block
+      .list__a-tips__block--title
+       #{memo.title}
+      .list__a-tips__block--body
+       #{memo.body}
+      .list__a-tips__block--url
+       .list__a-tips__block--url--left
+        参考サイト
+       .list__a-tips__block--url--right
+        .list__a-tips__block--url--right--link
+         =link_to "#{memo.link}","#{memo.link}"
+      .list__a-tips__block--menu
+       .list__a-tips__block--menu--date
+        #{memo.created_at}
+       .list__a-tips__block--menu--edit
+        =link_to'編集',edit_memo_path
+       .list__a-tips__block--menu--delete
+        削除
+      .list__a-tips__block--open
+       =icon('fa','chevron-up')  
+   
