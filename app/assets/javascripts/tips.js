@@ -1,12 +1,12 @@
 $(function(){
   let opens=$(".opens")
   let closes=$(".closes")
-  let memos=$(".a-memo").closest()
+  let memos=$("open").closest(".switchin")
   function tipsopen(){
-    // $(".switchin").removeClass("blind")
-    // $(".switchout").addClass("blind")
+      $(".switchin").removeClass("blind")
+      $(".switchout").addClass("blind")
     const index=memos.index(this)
-    $(".switchin").eq(index).removeClass("blind");
+    // $(".switchin").eq(index).removeClass("blind");
     // $(".switchout").eq(index).addClass("blind");
 console.log(memos)
   }
