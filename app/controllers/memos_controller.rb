@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
   def index
-    @memo=Memo.all.page(params[:page]).per(10)
+    @memo=Memo.all.page(params[:page]).per(10).order(updated_at:"DESC")
   end
 
   def new
@@ -27,6 +27,11 @@ class MemosController < ApplicationController
     @memo.destroy
     redirect_to root_path
   end
+
+  def search
+    @memos = Memo.search(params[:keyword])
+  end
+
   private
   def memo_params
     params.require(:memo).permit(:title,:body,:link)

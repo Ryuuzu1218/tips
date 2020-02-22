@@ -1,21 +1,16 @@
-$(function(){
+$(document).on('turbolinks:load', function() {
+
   let opens=$(".opens")
   let closes=$(".closes")
-  let memos=$("open").closest(".switchin")
   function tipsopen(){
-      $(".switchin").removeClass("blind")
-      $(".switchout").addClass("blind")
-    const index=memos.index(this)
-    // $(".switchin").eq(index).removeClass("blind");
-    // $(".switchout").eq(index).addClass("blind");
-console.log(memos)
+    $(this).closest('.a-memo').find(".switchin").removeClass("blind")
+    $(this).closest('.a-memo').find(".switchout").addClass("blind")
   }
   function tipsclose(){
-    $(".switchout").removeClass("blind")
-    $(".switchin").addClass("blind")
+    $(this).closest('.a-memo').find(".switchout").removeClass("blind")
+    $(this).closest('.a-memo').find(".switchin").addClass("blind")
   }
-
 
   opens.click(tipsopen)
   closes.click(tipsclose)
-})
+});

@@ -28,6 +28,11 @@
       color:black;
     }
   }
+  &__search{
+    width: 200px;
+    font-size: 20px;
+    margin:0 25px ;
+  }
 }
 
 
@@ -41,12 +46,12 @@
   }
 
   &--box{
-    background-color:green;
+    background-color:#696969;
   height:520px;
   overflow: scroll;
 }
   &__a-tips{
-  background-color: green;
+  background-color: #696969;
   width: 1000px;
   margin: 20px 50px;
   border-width: 2px;
@@ -119,12 +124,14 @@
     height: 20px;
     line-height: 20px;
     border: none;
+    width: 995px;
   }
   &--close{
     font-size:15px;
     height: 20px;
     line-height: 20px;
     border: none;
+    width: 995px;
   }
 
 }
