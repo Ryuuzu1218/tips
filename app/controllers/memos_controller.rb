@@ -29,7 +29,8 @@ class MemosController < ApplicationController
   end
 
   def search
-    @memos = Memo.search(params[:keyword])
+    split_keyword = params[:keyword].split(/[[:blank:]]+/)
+    @memos = Memo.search(split_keyword).page(params[:page]).per(10).order(updated_at:"DESC")
   end
 
   private
