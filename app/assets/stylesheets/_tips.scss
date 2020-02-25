@@ -1,0 +1,163 @@
+//index
+
+.wrapper{
+  padding-top: 70px; 
+  display: flex;
+  background-color:#EEEEEE;
+  height: 100vh;
+}
+
+.menu{
+  height:calc(100%-70px);
+  background-color: rgba(170, 255, 255, 0.534);
+  width: 250px;
+  font-size: 30px;
+  text-align: center;
+  &__create{
+    width: 210px;
+    height:150px;
+    background-color: orange;
+    margin:10px 20px 50px ;
+    border-radius: 1rem;
+    line-height: 150px;
+    font-size:25px ;
+    border-style: solid;
+    border-color: rgb(16, 45, 175);
+    a{
+      text-decoration: none;
+      color:black;
+    }
+  }
+  &__search{
+    width: 200px;
+    font-size: 20px;
+    margin:0 25px ;
+  }
+}
+
+
+.list{
+  background-color: #778899;
+  width: calc(100% - 210px);
+  &--title{
+    text-align: center;
+    font-size: 40px;
+    
+  }
+
+  &--box{
+    background-color:#696969;
+  height:520px;
+  overflow: scroll;
+}
+  &__a-tips{
+  background-color: #696969;
+  width: 1000px;
+  margin: 20px 50px;
+  border-width: 2px;
+  border-color: black;
+  text-align: center;
+  margin-bottom: 10px;
+  .blind{
+    display: none;
+  }
+  .show{
+    display:block;
+  }
+  &__block{
+    background-color: white;
+    margin-bottom: 20px;
+    border-bottom: solid;
+    border-style: solid;
+    
+  &--title{
+    font-size: 18px;
+    border-bottom: solid;
+  }
+  &--body{
+    border-bottom: solid;
+    min-height:100px ;
+    max-height: 350px;
+    text-align: left;
+    overflow: scroll;
+  }
+  &--url{display: flex;
+    text-align: center;
+    height: 30px;
+    font-size: 15px;
+    &--left{
+      border-bottom: solid;
+      border-right: solid;
+      width: 300px;
+    }
+    &--right{
+      width: 700px;
+      border-bottom: solid;
+      overflow: scroll;
+      &--link{
+        width: 650px;
+        margin: 0 25px;
+        max-height: 30px;
+        text-overflow: ellipsis;
+      }
+    }
+   }
+  &--menu{
+    display: flex;
+    text-align: center;
+    border-bottom: solid;
+  &--date{
+    width: 600px;
+    border-right: solid;
+  }
+  &--edit{
+    width: 200px;
+    border-right: solid;
+  }
+  &--delete{
+    width: 200px;
+
+  }
+  }
+  &--open{
+    font-size:15px;
+    height: 20px;
+    line-height: 20px;
+    border: none;
+    width: 995px;
+  }
+  &--close{
+    font-size:15px;
+    height: 20px;
+    line-height: 20px;
+    border: none;
+    width: 995px;
+  }
+
+}
+}
+}
+
+
+//new
+
+.create{
+  padding-top: 70px;
+  text-align: center;
+  background-color: #778899;
+  height:100vh;
+  &--title{
+    font-size: 35px;
+
+  }
+}
+.pages{text-align: center;
+font-size: 30px;
+color: white;
+a{
+  color:blue;
+  text-decoration: none;
+}
+}
+
+
