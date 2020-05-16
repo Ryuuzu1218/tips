@@ -58,3 +58,12 @@ gem 'devise'
 gem 'pry-byebug'
 gem 'pry-rails'
 gem 'kaminari'
+gem 'ransack'
+gem 'rspec-rails'
+gem 'factory_bot_rails'
+gem 'rails-controller-testing'
+
+group  :test do
+gem 'faker'
+gem 'capybara'
+end

@@ -3,14 +3,14 @@
 .create
  .create--title
   新しくtipsを作成する
- .cteate--tips
+ .cteate--tips#form-name
   =form_with model: @memo, url:memos_path , local: true  do |f|
    .create--tips--title
-    =f.text_field :title,class:'text-form',placeholder:'タイトルを入力'
+    =f.text_field :title,class:'text-form validate[required]',placeholder:'タイトルを入力',id:'title'
    .create--tips--body
-    =f.text_area :body,class:'text-body',placeholder:'本文を入力'
+    =f.text_area :body,class:'text-body validate[required]',placeholder:'本文を入力',id:'body'
    .create--tips--url
-    =f.text_field :link,class:'text-url',placeholder:'参考にしたURLを記入'
+    =f.text_field :link,class:'text-url validate[required]',placeholder:'参考にしたURLを記入',id:'link'
    .create--tips--send
     =f.submit "新しく作る！"
 
