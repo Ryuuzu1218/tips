@@ -22,14 +22,14 @@
     line-height: 150px;
     font-size:25px ;
     border-style: solid;
-    border-color: rgb(16, 45, 175);
+    border-color: #bad3ff;
     a{
       text-decoration: none;
       color:black;
     }
   }
   &__search{
-    width: 200px;
+    width: 190px;
     font-size: 20px;
     margin:0 25px ;
   }
@@ -37,7 +37,7 @@
 
 
 .list{
-  background-color: #778899;
+  background-color: #ffddff;
   width: calc(100% - 210px);
   &--title{
     text-align: center;
@@ -46,12 +46,12 @@
   }
 
   &--box{
-    background-color:#696969;
+    background-color:#ffefd5;
   height:520px;
   overflow: scroll;
 }
   &__a-tips{
-  background-color: #696969;
+  background-color: #ffefd5;
   width: 1000px;
   margin: 20px 50px;
   border-width: 2px;
@@ -160,4 +160,14 @@ a{
 }
 }
 
+.search-input{
+  width: 220px;
+}
 
+.search-btn{
+  width: 100px;
+  height: 25px;
+}
+.none{
+  display: none;
+}
