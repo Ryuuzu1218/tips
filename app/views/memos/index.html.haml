@@ -1,22 +1,14 @@
 .wrapper
- .menu
-  My tips
-  .menu__create
-   .menu__create--click
-    =link_to "新しく作る",new_memo_path
-  .menu__search
-   = form_with(url: search_memos_path, local: true, method: :get) do |fo|
-    = fo.text_field :keyword, placeholder: "単語で検索する", class: "search-input"
-    = fo.submit "検索", class: "search-btn"
-
+ =render "mymenu"
 
 
  .list
   .list--title
-   My tips一覧
+   投稿されたtips一覧
+
   .list--box
    .list__a-tips
-    - @memo.each_with_index do |memo|
+    - @memo.each do |memo|
      .list__a-tips__block.a-memo
       .list__a-tips__block--title.switchout
        #{memo.title}

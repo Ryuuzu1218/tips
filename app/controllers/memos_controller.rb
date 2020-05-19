@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
   def index
-    @memo=Memo.all.page(params[:page]).per(10).order(updated_at:"DESC")
+    @memo = Memo.all.page(params[:page]).per(10).order(updated_at:"DESC")
   end
 
   def new
@@ -29,8 +29,7 @@ class MemosController < ApplicationController
   end
 
   def search
-    split_keyword = params[:keyword].split(/[[:blank:]]+/)
-    @memos = Memo.search(split_keyword).page(params[:page]).per(10).order(updated_at:"DESC")
+    @memos = Memo.search(params[:keyword]).page(params[:page]).per(10).order(updated_at:"DESC")
   end
 
   private

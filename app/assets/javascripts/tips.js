@@ -13,4 +13,8 @@ $(document).on('turbolinks:load', function() {
 
   opens.click(tipsopen)
   closes.click(tipsclose)
+  
+  $(document).ready(function () {
+    $("#form-name").validationEngine();
+  });
 });

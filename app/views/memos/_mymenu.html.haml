@@ -1,0 +1,10 @@
+.menu
+ My tips
+ =button_to '新しく作る',new_memo_path,method: :get,class:'menu__create'
+ .menu__search
+  = form_with(url: search_memos_path,local: true, method: :get) do |fo|
+   = fo.text_field  :keyword, placeholder: "単語で検索する", class: "search-input"
+   %label.menu__search
+    %button.search-btn
+     検索する
+    = fo.submit "検索", class: "search-btn none"
