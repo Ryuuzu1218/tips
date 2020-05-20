@@ -1,24 +1,15 @@
-# README
+##アプリ概要
+自分の覚えておきたい情報を即座に簡単にメモをする。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##機能一覧
+メモ一覧の閲覧
+メモ検索機能
+ページネーション機能
+ログイン機能
+メモ投稿機能
+メモの編集・削除機能
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##アプリ内で使用している技術
+データーベース：MySQL
+使用言語：Ruby on Rails
+テキストエディタ：VisualStudioCode
