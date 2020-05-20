@@ -17,13 +17,29 @@
     width: 210px;
     height:150px;
     background-color: orange;
-    margin:10px 20px 50px ;
+    margin:10px 20px 20px ;
     border-radius: 1rem;
     line-height: 150px;
     font-size:25px ;
     border-style: solid;
     border-color: #bad3ff;
     a{
+      text-decoration: none;
+      color:black;
+    }
+  }
+  &__cantcreate{
+    width: 210px;
+    height:80px;
+    background-color: #dcdcdc;
+    margin:10px 20px 50px ;
+    font-size:25px ;
+    border-style: solid;
+    border-color: #bad3ff;
+  }
+  &__mypage{
+    margin-top: 20px;
+        a{
       text-decoration: none;
       color:black;
     }
@@ -144,7 +160,7 @@
 .create{
   padding-top: 70px;
   text-align: center;
-  background-color: #778899;
+  background-color: #ffe4e1;
   height:100vh;
   &--title{
     font-size: 35px;
@@ -161,7 +177,7 @@ a{
 }
 
 .search-input{
-  width: 220px;
+  width: 210px;
 }
 
 .search-btn{
