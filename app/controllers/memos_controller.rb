@@ -29,6 +29,8 @@ class MemosController < ApplicationController
   end
 
   def search
+    @keyword=params[:keyword]
+    @memos_search = Memo.search(params[:keyword])
     @memos = Memo.search(params[:keyword]).page(params[:page]).per(10).order(updated_at:"DESC")
   end
 

@@ -1,0 +1,46 @@
+.wrapper
+ =render "memos/mymenu"
+
+
+ .list
+  .list--title
+   #{@nickname}さんのtips一覧
+
+  .list--box
+   .list__a-tips
+    - @memo.each do |memo|
+     .list__a-tips__block.a-memo
+      .list__a-tips__block--title.switchout
+       #{memo.title}
+      .list__a-tips__block--title.blind.switchin
+       #{memo.title}
+      .list__a-tips__block--body.blind.switchin
+       = simple_format(memo.body)
+      .list__a-tips__block--url.blind.switchin
+       .list__a-tips__block--url--left
+        参考サイト
+       .list__a-tips__block--url--right
+        .list__a-tips__block--url--right--link
+         =link_to "#{memo.link}","#{memo.link}",target: :_blank
+      .list__a-tips__block--menu.blind.switchin 
+       - if user_signed_in? && current_user.id == memo.user_id
+        .list__a-tips__block--menu--date
+         #{memo.updated_at.strftime("%Y-%m-%d %H:%M:%S")}
+        .list__a-tips__block--menu--edit
+         =link_to"編集",edit_memo_path(memo.id)  
+        .list__a-tips__block--menu--delete
+         =link_to"削除",memo_path(memo.id),method: :delete
+       - else
+        .list__a-tips__block--menu--date
+         #{memo.updated_at.strftime("%Y-%m-%d %H:%M:%S")}
+        .list__a-tips__block--menu--author
+         作成者  
+        .list__a-tips__block--menu--delete
+         #{memo.user.nickname}
+
+      %button.list__a-tips__block--open.opens.switchout
+       =icon('fa','chevron-down') 
+      %button.list__a-tips__block--close.closes.blind.switchin
+       =icon('fa','chevron-up') 
+   .pages
+    =paginate(@memo)

@@ -4,33 +4,38 @@
 
  .list
   .list--title
-   検索結果
-  .list--box
-   .list__a-tips
-    - @memos.each do |memo|
-     .list__a-tips__block.a-memo
-      .list__a-tips__block--title
-       #{memo.title}
-      .list__a-tips__block--body.blind.switchin
-       = simple_format(memo.body)
-      .list__a-tips__block--url.blind.switchin
-       .list__a-tips__block--url--left
-        参考サイト
-       .list__a-tips__block--url--right
-        .list__a-tips__block--url--right--link
+   ”#{@keyword}”  での検索結果
+  - if @memos_search.present?
+   .list--box
+    .list__a-tips
+     - @memos.each do |memo|
+      .list__a-tips__block.a-memo
+       .list__a-tips__block--title
+        #{memo.title}
+       .list__a-tips__block--body.blind.switchin
+        = simple_format(memo.body)
+       .list__a-tips__block--url.blind.switchin
+        .list__a-tips__block--url--left
+         参考サイト
+        .list__a-tips__block--url--right
+         .list__a-tips__block--url--right--link
          =link_to "#{memo.link}","#{memo.link}"
-      .list__a-tips__block--menu.blind.switchin
-       .list__a-tips__block--menu--date
-        #{memo.created_at}
-       .list__a-tips__block--menu--edit
-        =link_to"編集",edit_memo_path(memo.id)  
-       .list__a-tips__block--menu--delete
-        =link_to"削除",memo_path(memo.id),method: :delete
-      %button.list__a-tips__block--open.opens.switchout
-       =icon('fa','chevron-down') 
-       開く
-       =icon('fa','chevron-down') 
-      %button.list__a-tips__block--close.closes.blind.switchin
-       =icon('fa','chevron-up') 
-       閉じる
-       =icon('fa','chevron-up') 
+       .list__a-tips__block--menu.blind.switchin
+        .list__a-tips__block--menu--date
+         #{memo.created_at}
+        .list__a-tips__block--menu--edit
+         =link_to"編集",edit_memo_path(memo.id)  
+        .list__a-tips__block--menu--delete
+         =link_to"削除",memo_path(memo.id),method: :delete
+       %button.list__a-tips__block--open.opens.switchout
+        =icon('fa','chevron-down') 
+        開く
+        =icon('fa','chevron-down') 
+       %button.list__a-tips__block--close.closes.blind.switchin
+        =icon('fa','chevron-up') 
+        閉じる
+        =icon('fa','chevron-up') 
+  - else
+   .list--box
+    .list--box__nothing
+     条件に一致するTIPSはありませんでした。

@@ -42,6 +42,7 @@
         a{
       text-decoration: none;
       color:black;
+      background-color: #FFFFBB;
     }
   }
   &__search{
@@ -65,6 +66,13 @@
     background-color:#ffefd5;
   height:520px;
   overflow: scroll;
+  &__nothing{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    color: #808080;
+  
+  }
 }
   &__a-tips{
   background-color: #ffefd5;
@@ -115,6 +123,11 @@
         margin: 0 25px;
         max-height: 30px;
         text-overflow: ellipsis;
+        a{
+          color:blue;
+          text-decoration: none;
+        }      
+  
       }
     }
    }
@@ -129,9 +142,18 @@
   &--edit{
     width: 200px;
     border-right: solid;
+    a{
+      color:blue;
+      text-decoration: none;
+    }      
+
   }
   &--delete{
     width: 200px;
+    a{
+      color:blue;
+      text-decoration: none;
+    }      
 
   }
   }
