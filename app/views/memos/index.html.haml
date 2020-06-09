@@ -20,8 +20,10 @@
        .list__a-tips__block--url--left
         参考サイト
        .list__a-tips__block--url--right
-        .list__a-tips__block--url--right--link
+        .list__a-tips__block--url--right--link.url.exist
          =link_to "#{memo.link}","#{memo.link}",target: :_blank
+        .list__a-tips__block--url--right--link.url.noexist
+         #{memo.link}
       .list__a-tips__block--menu.blind.switchin 
        - if user_signed_in? && current_user.id == memo.user_id
         .list__a-tips__block--menu--date
