@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: tips_production
-  username: tips
-  password: <%= ENV['TIPS_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
