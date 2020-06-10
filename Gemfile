@@ -67,3 +67,6 @@ group  :test do
 gem 'faker'
 gem 'capybara'
 end
+group :production do
+  gem 'unicorn', '5.4.1'
+end
