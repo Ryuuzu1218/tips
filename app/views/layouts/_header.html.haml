@@ -5,6 +5,8 @@
   - if user_signed_in?
    .header__menu--user-name
     #{current_user.nickname}さん
+   .header__menu--user-mypage
+    =link_to 'マイページへ',user_path(current_user)
    .header__menu__user-logout
     =link_to "ログアウト", destroy_user_session_path, method: :delete
   - else

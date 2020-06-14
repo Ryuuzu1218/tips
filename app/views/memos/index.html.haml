@@ -21,7 +21,7 @@
         参考サイト
        .list__a-tips__block--url--right
         .list__a-tips__block--url--right--link
-         #{memo.link}
+         =link_to "#{memo.link}","#{memo.link}"
       .list__a-tips__block--menu.blind.switchin 
        - if user_signed_in? && current_user.id == memo.user_id
         .list__a-tips__block--menu--date
